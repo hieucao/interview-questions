@@ -1,11 +1,13 @@
 **Object Oriented Programming (OOP)**
 Java is a computer programming language that is concurrent, class-based and object-oriented. The advantages of object oriented software development are shown below:
+
 - Modular development of code, which leads to easy maintenance and modification.
 - Reusability of code.
 - Improved reliability and flexibility of code.
 - Increased understanding of code.
 
 Object-oriented programming contains many significant features, such as encapsulation, inheritance, polymorphism and abstraction. We analyze each feature separately in the following sections.
+
 **Encapsulation**
 
 Encapsulation provides objects with the ability to hide their internal characteristics and behavior. Each object provides a number of methods, which can be accessed by other objects and change its internal data. In Java, there are three access modifiers: public, private and protected. Each modifier imposes different access rights to other classes, either in the same or in external packages. Some of the advantages of using encapsulation are listed below:
@@ -13,15 +15,19 @@ The internal state of every objected is protected by hiding its attributes.
 It increases usability and maintenance of code, because the behavior of an object can be independently changed or extended.
 It improves modularity by preventing objects to interact with each other, in an undesired way.
 You can refer to our tutorial here for more details and examples on encapsulation.
+
 **Polymorphism**
 
 Polymorphism is the ability of programming languages to present the same interface for differing underlying data types. A polymorphic type is a type whose operations can also be applied to values of some other type.
+
 **Inheritance**
 
 Inheritance provides an object with the ability to acquire the fields and methods of another class, called base class. Inheritance provides re-usability of code and can be used to add additional features to an existing class, without modifying it.
+
 **Abstraction**
 
 Abstraction is the process of separating ideas from specific instances and thus, develop classes in terms of their own functionality, instead of their implementation details. Java supports the creation and existence of abstract classes that expose interfaces, without including the actual implementation of all methods. The abstraction technique aims to separate the implementation details of a class from its behavior.
+
 **Differences between Abstraction and Encapsulation**
 
 Abstraction and encapsulation are complementary concepts. On the one hand, abstraction focuses on the behavior of an object. On the other hand, encapsulation focuses on the implementation of an object’s behavior. Encapsulation is usually achieved by hiding information about the internal state of an object and thus, can be seen as a strategy used in order to provide abstraction.
@@ -29,10 +35,15 @@ Abstraction and encapsulation are complementary concepts. On the one hand, abstr
 **General Questions about Java**
 
 **1. What is JVM ? Why is Java called the “Platform Independent Programming Language” ?** A Java virtual machine (JVM) is a process virtual machine that can execute Java bytecode. Each Java source file is compiled into a bytecode file, which is executed by the JVM. Java was designed to allow application programs to be built that could be run on any platform, without having to be rewritten or recompiled by the programmer for each separate platform. A Java virtual machine makes this possible, because it is aware of the specific instruction lengths and other particularities of the underlying hardware platform.
+
 **2. What is the Difference between JDK and JRE ?** The Java Runtime Environment (JRE) is basically the Java Virtual Machine (JVM) where your Java programs are being executed. It also includes browser plugins for applet execution. The Java Development Kit (JDK) is the full featured Software Development Kit for Java, including the JRE, the compilers and tools (like JavaDoc, and Java Debugger), in order for a user to develop, compile and execute Java applications.
+
 **3. What does the “static” keyword mean ? Can you override private or static method in Java ?** The static keyword denotes that a member variable or method can be accessed, without requiring an instantiation of the class to which it belongs. A user cannot override static methods in Java, because method overriding is based upon dynamic binding at runtime and static methods are statically binded at compile time. A static method is not associated with any instance of a class so the concept is not applicable.
+
 **4. Can you access non static variable in static context ?** A static variable in Java belongs to its class and its value remains the same for all its instances. A static variable is initialized when the class is loaded by the JVM. If your code tries to access a non-static variable, without any instance, the compiler will complain, because those variables are not created yet and they are not associated with any instance.
+
 **5. What are the Data Types supported by Java ?** What is Autoboxing and Unboxing ? The eight primitive data types supported by the Java programming language are:
+
 ```java
 byte
 short
@@ -43,10 +54,15 @@ double
 boolean
 char
 ```
+
 Autoboxing is the automatic conversion made by the Java compiler between the primitive types and their corresponding object wrapper classes. For example, the compiler converts an int to an Integer, a double to a Double, and so on. If the conversion goes the other way, this operation is called unboxing.
+
 **6. What is Function Overriding and Overloading in Java ?** Method overloading in Java occurs when two or more methods in the same class have the exact same name, but different parameters. On the other hand, method overriding is defined as the case when a child class redefines the same method as a parent class. Overridden methods must have the same name, argument list, and return type. The overriding method may not limit the access of the method it overrides.
+
 **7. What is a Constructor, Constructor Overloading in Java and Copy-Constructor ?** A constructor gets invoked when a new object is created. Every class has a constructor. In case the programmer does not provide a constructor for a class, the Java compiler (Javac) creates a default constructor for that class. The constructor overloading is similar to method overloading in Java. Different constructors can be created for a single class. Each constructor must have its own unique parameter list. Finally, Java does support copy constructors like C++, but the difference lies in the fact that Java doesn’t create a default copy constructor if you don’t write your own.
+
 **8. Does Java support multiple inheritance ?** No, Java does not support multiple inheritance. Each class is able to extend only on one class, but is able to implement more than one interfaces.
+
 **9. What is the difference between an Interface and an Abstract class ?** Java provides and supports the creation both of abstract classes and interfaces. Both implementations share some common characteristics, but they differ in the following features:
 All methods in an interface are implicitly abstract. On the other hand, an abstract class may contain both abstract and non-abstract methods.
 A class may implement a number of Interfaces, but can extend only one abstract class.
@@ -56,15 +72,20 @@ Variables declared in a Java interface is by default final. An abstract class ma
 Members of a Java interface are public by default. A member of an abstract class can either be private, protected or public.
 An interface is absolutely abstract and cannot be instantiated. An abstract class also cannot be instantiated, but can be invoked if it contains a main method.
 Also check out the Abstract class and Interface differences for JDK 8.
+
 **10. What are pass by reference and pass by value ?** When an object is passed by value, this means that a copy of the object is passed. Thus, even if changes are made to that object, it doesn’t affect the original value. When an object is passed by reference, this means that the actual object is not passed, rather a reference of the object is passed. Thus, any changes made by the external method, are also reflected in all places.
-Java Threads
+
+**Java Threads**
+
 **11. What is the difference between processes and threads ?** A process is an execution of a program, while a Thread is a single execution sequence within a process. A process can contain multiple threads. A Thread is sometimes called a lightweight process.
+
 **12. Explain different ways of creating a thread. Which one would you prefer and why ?** There are three ways that can be used in order for a Thread to be created:
 A class may extend the Thread class.
 A class may implement the Runnable interface.
 An application can use the Executor framework, in order to create a thread pool.
 The Runnable interface is preferred, as it does not require an object to inherit the Thread class. In case your application design requires multiple inheritance, only interfaces can help you. Also, the thread pool is very efficient and can be implemented and used very easily.
-13. Explain the available thread states in a high-level. During its execution, a thread can reside in one of the following states:
+
+**13. Explain the available thread states in a high-level.** During its execution, a thread can reside in one of the following states:
 NEW: The thread becomes ready to run, but does not necessarily start running immediately.
 RUNNABLE: The Java Virtual Machine (JVM) is actively executing the thread’s code.
 BLOCKED: The thread is in a blocked state while waiting for a monitor lock.
