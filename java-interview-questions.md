@@ -2,16 +2,16 @@
 
 ## Table of Contents
 
-- [Object Oriented Programming (OOP)]()
-- [General Questions about Java]()
-- [Java Threads]()
-- [Java Collections]()
+- [Object Oriented Programming (OOP)](#object-oriented-programming-oop)
+- [General Questions about Java](#encapsulation)
+- [Java Threads](#java-threads)
+- [Java Collections](#java-collections)
 - [Garbage Collectors]()
 - [Exception Handling]()
-- [Java Applets]()
-- [Swing]()
-- [JDBC]()
-- [Remote Method Invocation (RMI)]()
+- [Java Applets](#java-applets)
+- [Swing](#swing)
+- [JDBC](#jdbc)
+- [Remote Method Invocation (RMI)](#remote-method-innovation)
 - [Servlets]()
 - [JSP]()
 
@@ -292,7 +292,8 @@ Swing
 CallableStament.prepareCall();
 
 **77. What does Connection pooling mean ?** The interaction with a database can be costly, regarding the opening and closing of database connections. Especially, when the number of database clients increases, this cost is very high and a large number of resources is consumed.A pool of database connections is obtained at start up by the application server and is maintained in a pool. A request for a connection is served by a connection residing in the pool. In the end of the connection, the request is returned to the pool and can be used to satisfy future requests.
-Remote Method Invocation (RMI)
+
+### Remote Method Invocation (RMI)
 
 **78. What is RMI ?** The Java Remote Method Invocation (Java RMI) is a Java API that performs the object-oriented equivalent of remote procedure calls (RPC), with support for direct transfer of serialized Java classes and distributed garbage collection. Remote Method Invocation (RMI) can also be seen as the process of activating a method on a remotely running object. RMI offers location transparency because a user feels that a method is executed on a locally running object. Check some RMI Tips here.
 
@@ -312,11 +313,12 @@ Transport layer: This layer is responsible for connecting the two JVM participat
 **84. What is the difference between using bind() and rebind() methods of Naming Class ?** The bind method bind is responsible for binding the specified name to a remote object, while the rebind method is responsible for rebinding the specified name to a new remote object. In case a binding exists for that name, the binding is replaced.
 
 **85. What are the steps involved to make work a RMI program ?** The following steps must be involved in order for a RMI program to work properly:
-Compilation of all source files.
-Generatation of the stubs using rmic.
-Start the rmiregistry.
-Start the RMIServer.
-Run the client program.
+
+- Compilation of all source files.
+- Generatation of the stubs using rmic.
+- Start the rmiregistry.
+- Start the RMIServer.
+- Run the client program.
 
 **86. What is the role of stub in RMI ?** A stub for a remote object acts as a client’s local representative or proxy for the remote object. The caller invokes a method on the local stub, which is responsible for executing the method on the remote object. When a stub’s method is invoked, it undergoes the following steps:
 
@@ -333,7 +335,8 @@ Run the client program.
 **89. Explain Marshalling and demarshalling.** When an application wants to pass its memory objects across a network to another host or persist it to storage, the in-memory representation must be converted to a suitable format. This process is called marshalling and the revert operation is called demarshalling.
 
 **90. Explain Serialization and Deserialization.** Java provides a mechanism, called object serialization where an object can be represented as a sequence of bytes and includes the object’s data, as well as information about the object’s type, and the types of data stored in the object. Thus, serialization can be seen as a way of flattening objects, in order to be stored on disk, and later, read back and reconstituted. Deserialisation is the reverse process of converting an object from its flattened state to a live object.
-Servlets
+
+### Servlets
 
 **91. What is a Servlet ?** The servlet is a Java programming language class used to process client requests and generate dynamic web content. Servlets are mostly used to process or store data submitted by an HTML form, provide dynamic content and manage state information that does not exist in the stateless HTTP protocol.
 
@@ -379,24 +382,27 @@ JSP
 **108. How are the JSP requests handled ?** On the arrival of a JSP request, the browser first requests a page with a .jsp extension. Then, the Web server reads the request and using the JSP compiler, the Web server converts the JSP page into a servlet class. Notice that the JSP file is compiled only on the first request of the page, or if the JSP file has changed.The generated servlet class is invoked, in order to handle the browser’s request. Once the execution of the request is over, the servlet sends a response back to the client. See how to get Request parameters in a JSP.
 
 **109. What are the advantages of JSP ?** The advantages of using the JSP technology are shown below:
-JSP pages are dynamically compiled into servlets and thus, the developers can easily make updates to presentation code.
-JSP pages can be pre-compiled.
-JSP pages can be easily combined to static templates, including HTML or XML fragments, with code that generates dynamic content.
-Developers can offer customized JSP tag libraries that page authors access using an XML-like syntax.
-Developers can make logic changes at the component level, without editing the individual pages that use the application’s logic.
+
+- JSP pages are dynamically compiled into servlets and thus, the developers can easily make updates to presentation code.
+- JSP pages can be pre-compiled.
+- JSP pages can be easily combined to static templates, including HTML or XML fragments, with code that generates dynamic content.
+- Developers can offer customized JSP tag libraries that page authors access using an XML-like syntax.
+- Developers can make logic changes at the component level, without editing the individual pages that use the application’s logic.
 
 **110. What are Directives ?** What are the different types of Directives available in JSP ? Directives are instructions that are processed by the JSP engine, when the page is compiled to a servlet. Directives are used to set page-level instructions, insert data from external files, and specify custom tag libraries. Directives are defined between < %@ and % >.The different types of directives are shown below:
-Include directive: it is used to include a file and merges the content of the file with the current page.
-Page directive: it is used to define specific attributes in the JSP page, like error page and buffer.
-Taglib: it is used to declare a custom tag library which is used in the page.
+
+- Include directive: it is used to include a file and merges the content of the file with the current page.
+- Page directive: it is used to define specific attributes in the JSP page, like error page and buffer.
+- Taglib: it is used to declare a custom tag library which is used in the page.
 
 **111. What are JSP actions ?** JSP actions use constructs in XML syntax to control the behavior of the servlet engine. JSP actions are executed when a JSP page is requested. They can be dynamically inserted into a file, re-use JavaBeans components, forward the user to another page, or generate HTML for the Java plugin.Some of the available actions are listed below:
-jsp:include – includes a file, when the JSP page is requested.
-jsp:useBean – finds or instantiates a JavaBean.
-jsp:setProperty – sets the property of a JavaBean.
-jsp:getProperty – gets the property of a JavaBean.
-jsp:forward – forwards the requester to a new page.
-jsp:plugin – generates browser-specific code.
+
+- jsp:include – includes a file, when the JSP page is requested.
+- jsp:useBean – finds or instantiates a JavaBean.
+- jsp:setProperty – sets the property of a JavaBean.
+- jsp:getProperty – gets the property of a JavaBean.
+- jsp:forward – forwards the requester to a new page.
+- jsp:plugin – generates browser-specific code.
 
 **112. What are Scriptlets ?** In Java Server Pages (JSP) technology, a scriptlet is a piece of Java-code embedded in a JSP page. The scriptlet is everything inside the tags. Between these tags, a user can add any valid scriplet.
 
@@ -405,6 +411,8 @@ jsp:plugin – generates browser-specific code.
 **114. What are Expressions ?** A JSP expression is used to insert the value of a scripting language expression, converted into a string, into the data stream returned to the client, by the web server. Expressions are defined between <% = and %> tags.
 
 **115. What is meant by implicit objects and what are they ?** JSP implicit objects are those Java objects that the JSP Container makes available to developers in each page. A developer can call them directly, without being explicitly declared. JSP Implicit Objects are also called pre-defined variables.The following objects are considered implicit in a JSP page:
+
+```java
 application
 page
 request
@@ -414,4 +422,5 @@ exception
 out
 config
 pageContext
+```
 Still with us? Wow, that was a huge article about different types of questions that can be used in a Java interview. If you enjoyed this, then subscribe to our newsletter to enjoy weekly updates and complimentary whitepapers! Also, check out our courses for more advanced training!
