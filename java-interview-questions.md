@@ -1,4 +1,5 @@
-**Object Oriented Programming (OOP)**
+## Object Oriented Programming (OOP)
+
 Java is a computer programming language that is concurrent, class-based and object-oriented. The advantages of object oriented software development are shown below:
 
 - Modular development of code, which leads to easy maintenance and modification.
@@ -8,7 +9,7 @@ Java is a computer programming language that is concurrent, class-based and obje
 
 Object-oriented programming contains many significant features, such as encapsulation, inheritance, polymorphism and abstraction. We analyze each feature separately in the following sections.
 
-**Encapsulation**
+### Encapsulation
 
 Encapsulation provides objects with the ability to hide their internal characteristics and behavior. Each object provides a number of methods, which can be accessed by other objects and change its internal data. In Java, there are three access modifiers: public, private and protected. Each modifier imposes different access rights to other classes, either in the same or in external packages. Some of the advantages of using encapsulation are listed below:
 The internal state of every objected is protected by hiding its attributes.
@@ -16,23 +17,23 @@ It increases usability and maintenance of code, because the behavior of an objec
 It improves modularity by preventing objects to interact with each other, in an undesired way.
 You can refer to our tutorial here for more details and examples on encapsulation.
 
-**Polymorphism**
+### Polymorphism
 
 Polymorphism is the ability of programming languages to present the same interface for differing underlying data types. A polymorphic type is a type whose operations can also be applied to values of some other type.
 
-**Inheritance**
+### Inheritance
 
 Inheritance provides an object with the ability to acquire the fields and methods of another class, called base class. Inheritance provides re-usability of code and can be used to add additional features to an existing class, without modifying it.
 
-**Abstraction**
+### Abstraction
 
 Abstraction is the process of separating ideas from specific instances and thus, develop classes in terms of their own functionality, instead of their implementation details. Java supports the creation and existence of abstract classes that expose interfaces, without including the actual implementation of all methods. The abstraction technique aims to separate the implementation details of a class from its behavior.
 
-**Differences between Abstraction and Encapsulation**
+### Differences between Abstraction and Encapsulation
 
 Abstraction and encapsulation are complementary concepts. On the one hand, abstraction focuses on the behavior of an object. On the other hand, encapsulation focuses on the implementation of an object’s behavior. Encapsulation is usually achieved by hiding information about the internal state of an object and thus, can be seen as a strategy used in order to provide abstraction.
 
-**General Questions about Java**
+## General Questions about Java
 
 **1. What is JVM ? Why is Java called the “Platform Independent Programming Language” ?** A Java virtual machine (JVM) is a process virtual machine that can execute Java bytecode. Each Java source file is compiled into a bytecode file, which is executed by the JVM. Java was designed to allow application programs to be built that could be run on any platform, without having to be rewritten or recompiled by the programmer for each separate platform. A Java virtual machine makes this possible, because it is aware of the specific instruction lengths and other particularities of the underlying hardware platform.
 
@@ -75,7 +76,7 @@ Also check out the Abstract class and Interface differences for JDK 8.
 
 **10. What are pass by reference and pass by value ?** When an object is passed by value, this means that a copy of the object is passed. Thus, even if changes are made to that object, it doesn’t affect the original value. When an object is passed by reference, this means that the actual object is not passed, rather a reference of the object is passed. Thus, any changes made by the external method, are also reflected in all places.
 
-**Java Threads**
+## Java Threads
 
 **11. What is the difference between processes and threads ?** A process is an execution of a program, while a Thread is a single execution sequence within a process. A process can contain multiple threads. A Thread is sometimes called a lightweight process.
 
@@ -86,48 +87,66 @@ An application can use the Executor framework, in order to create a thread pool.
 The Runnable interface is preferred, as it does not require an object to inherit the Thread class. In case your application design requires multiple inheritance, only interfaces can help you. Also, the thread pool is very efficient and can be implemented and used very easily.
 
 **13. Explain the available thread states in a high-level.** During its execution, a thread can reside in one of the following states:
-NEW: The thread becomes ready to run, but does not necessarily start running immediately.
-RUNNABLE: The Java Virtual Machine (JVM) is actively executing the thread’s code.
-BLOCKED: The thread is in a blocked state while waiting for a monitor lock.
-WAITING: The thread waits for another thread to perform a particular action.
-TIMED_WAITING: The thread waits for another thread to perform a particular action up to a specified waiting time.
-TERMINATED: The thread has finished its execution.
-14. What is the difference between a synchronized method and a synchronized block ? In Java programming, each object has a lock. A thread can acquire the lock for an object by using the synchronized keyword. The synchronized keyword can be applied in a method level (coarse grained lock) or block level of code (fine grained lock).
-15. How does thread synchronization occurs inside a monitor ? What levels of synchronization can you apply ? The JVM uses locks in conjunction with monitors. A monitor is basically a guardian that watches over a sequence of synchronized code and ensuring that only one thread at a time executes a synchronized piece of code. Each monitor is associated with an object reference. The thread is not allowed to execute the code until it obtains the lock.
-16. What’s a deadlock ? A condition that occurs when two processes are waiting for each other to complete, before proceeding. The result is that both processes wait endlessly.
-17. How do you ensure that N threads can access N resources without deadlock ? A very simple way to avoid deadlock while using N threads is to impose an ordering on the locks and force each thread to follow that ordering. Thus, if all threads lock and unlock the mutexes in the same order, no deadlocks can arise.
-Java Collections
-18. What are the basic interfaces of Java Collections Framework ? Java Collections Framework provides a well designed set of interfaces and classes that support operations on a collections of objects. The most basic interfaces that reside in the Java Collections Framework are:
+
+-**`NEW`**: The thread becomes ready to run, but does not necessarily start running immediately.
+-**`RUNNABLE`**: The Java Virtual Machine (JVM) is actively executing the thread’s code.
+-**`BLOCKED`**: The thread is in a blocked state while waiting for a monitor lock.
+-**`WAITING`**: The thread waits for another thread to perform a particular action.
+-**`TIMED_WAITING`**: The thread waits for another thread to perform a particular action up to a specified waiting time.
+-**`TERMINATED`**: The thread has finished its execution.
+
+**14. What is the difference between a synchronized method and a synchronized block ?** In Java programming, each object has a lock. A thread can acquire the lock for an object by using the synchronized keyword. The synchronized keyword can be applied in a method level (coarse grained lock) or block level of code (fine grained lock).
+
+**15. How does thread synchronization occurs inside a monitor ?** What levels of synchronization can you apply ? The JVM uses locks in conjunction with monitors. A monitor is basically a guardian that watches over a sequence of synchronized code and ensuring that only one thread at a time executes a synchronized piece of code. Each monitor is associated with an object reference. The thread is not allowed to execute the code until it obtains the lock.
+
+**16. What’s a deadlock ?** A condition that occurs when two processes are waiting for each other to complete, before proceeding. The result is that both processes wait endlessly.
+
+**17. How do you ensure that N threads can access N resources without deadlock ?** A very simple way to avoid deadlock while using N threads is to impose an ordering on the locks and force each thread to follow that ordering. Thus, if all threads lock and unlock the mutexes in the same order, no deadlocks can arise.
+
+## Java Collections
+
+**18. What are the basic interfaces of Java Collections Framework ?** Java Collections Framework provides a well designed set of interfaces and classes that support operations on a collections of objects. The most basic interfaces that reside in the Java Collections Framework are:
 Collection, which represents a group of objects known as its elements.
 Set, which is a collection that cannot contain duplicate elements.
 List, which is an ordered collection and can contain duplicate elements.
 Map, which is an object that maps keys to values and cannot contain duplicate keys.
-19. Why Collection doesn’t extend Cloneable and Serializable interfaces ? The Collection interface specifies groups of objects known as elements. Each concrete implementation of a Collection can choose its own way of how to maintain and order its elements. Some collections allow duplicate keys, while some other collections don’t. The semantics and the implications of either cloning or serialization come into play when dealing with actual implementations. Thus, the concrete implementations of collections should decide how they can be cloned or serialized.
-20. What is an Iterator ? The Iterator interface provides a number of methods that are able to iterate over any Collection. Each Java Collection contains the iterator method that returns an Iterator instance. Iterators are capable of removing elements from the underlying collection during the iteration. 21. What differences exist between Iterator and ListIterator ? The differences of these elements are listed below:
+
+**19. Why Collection doesn’t extend Cloneable and Serializable interfaces ?** The Collection interface specifies groups of objects known as elements. Each concrete implementation of a Collection can choose its own way of how to maintain and order its elements. Some collections allow duplicate keys, while some other collections don’t. The semantics and the implications of either cloning or serialization come into play when dealing with actual implementations. Thus, the concrete implementations of collections should decide how they can be cloned or serialized.
+
+**20. What is an Iterator ?** The Iterator interface provides a number of methods that are able to iterate over any Collection. Each Java Collection contains the iterator method that returns an Iterator instance. Iterators are capable of removing elements from the underlying collection during the iteration. 21. What differences exist between Iterator and ListIterator ? The differences of these elements are listed below:
 An Iterator can be used to traverse the Set and List collections, while the ListIterator can be used to iterate only over Lists.
 The Iterator can traverse a collection only in forward direction, while the ListIterator can traverse a List in both directions.
 The ListIterator implements the Iterator interface and contains extra functionality, such as adding an element, replacing an element, getting the index position for previous and next elements, etc.
-22. What is difference between fail-fast and fail-safe ? The Iterator's fail-safe property works with the clone of the underlying collection and thus, it is not affected by any modification in the collection. All the collection classes in java.util package are fail-fast, while the collection classes in java.util.concurrent are fail-safe. Fail-fast iterators throw a ConcurrentModificationException, while fail-safe iterator never throws such an exception.
-23. How HashMap works in Java ? A HashMap in Java stores key-value pairs. The HashMap requires a hash function and uses hashCode and equals methods, in order to put and retrieve elements to and from the collection respectively. When the put method is invoked, the HashMap calculates the hash value of the key and stores the pair in the appropriate index inside the collection. If the key exists, its value is updated with the new value. Some important characteristics of a HashMap are its capacity, its load factor and the threshold resizing.
-24. What is the importance of hashCode() and equals() methods ? In Java, a HashMap uses the hashCode and equals methods to determine the index of the key-value pair and to detect duplicates. More specifically, the hashCode method is used in order to determine where the specified key will be stored. Since different keys may produce the same hash value, the equals method is used, in order to determine whether the specified key actually exists in the collection or not. Therefore, the implementation of both methods is crucial to the accuracy and efficiency of the HashMap.
-25. What differences exist between HashMap and Hashtable ? Both the HashMap and Hashtable classes implement the Map interface and thus, have very similar characteristics. However, they differ in the following features:
+
+**22. What is difference between fail-fast and fail-safe ?** The Iterator's fail-safe property works with the clone of the underlying collection and thus, it is not affected by any modification in the collection. All the collection classes in java.util package are fail-fast, while the collection classes in java.util.concurrent are fail-safe. Fail-fast iterators throw a ConcurrentModificationException, while fail-safe iterator never throws such an exception.
+
+**23. How HashMap works in Java ?** A HashMap in Java stores key-value pairs. The HashMap requires a hash function and uses hashCode and equals methods, in order to put and retrieve elements to and from the collection respectively. When the put method is invoked, the HashMap calculates the hash value of the key and stores the pair in the appropriate index inside the collection. If the key exists, its value is updated with the new value. Some important characteristics of a HashMap are its capacity, its load factor and the threshold resizing.
+
+**24. What is the importance of hashCode() and equals() methods ?** In Java, a HashMap uses the hashCode and equals methods to determine the index of the key-value pair and to detect duplicates. More specifically, the hashCode method is used in order to determine where the specified key will be stored. Since different keys may produce the same hash value, the equals method is used, in order to determine whether the specified key actually exists in the collection or not. Therefore, the implementation of both methods is crucial to the accuracy and efficiency of the HashMap.
+
+**25. What differences exist between HashMap and Hashtable ?** Both the HashMap and Hashtable classes implement the Map interface and thus, have very similar characteristics. However, they differ in the following features:
 A HashMap allows the existence of null keys and values, while a Hashtable doesn’t allow neither null keys, nor null values.
 A Hashtable is synchronized, while a HashMap is not. Thus, HashMap is preferred in single-threaded environments, while a Hashtable is suitable for multi-threaded environments.
 A HashMap provides its set of keys and a Java application can iterate over them. Thus, a HashMap is fail-fast. On the other hand, a Hashtable provides an Enumeration of its keys.
 The Hashtable class is considered to be a legacy class.
-26. What is difference between Array and ArrayList ? When will you use Array over ArrayList ? The Array and ArrayList classes differ on the following features:
+
+**26. What is difference between Array and ArrayList ? When will you use Array over ArrayList ?** The Array and ArrayList classes differ on the following features:
 Arrays can contain primitive or objects, while an ArrayList can contain only objects.
 Arrays have fixed size, while an ArrayList is dynamic.
 An ArrayListprovides more methods and features, such as addAll, removeAll, iterator, etc.
 For a list of primitive data types, the collections use autoboxing to reduce the coding effort. However, this approach makes them slower when working on fixed size primitive data types.
-27. What is difference between ArrayList and LinkedList ? Both the ArrayList and LinkedList classes implement the List interface, but they differ on the following features:
+
+**27. What is difference between ArrayList and LinkedList ?** Both the ArrayList and LinkedList classes implement the List interface, but they differ on the following features:
 An ArrayList is an index based data structure backed by an Array. It provides random access to its elements with a performance equal to O(1). On the other hand, a LinkedList stores its data as list of elements and every element is linked to its previous and next element. In this case, the search operation for an element has execution time equal to O(n).
 The Insertion, addition and removal operations of an element are faster in a LinkedList compared to an ArrayList, because there is no need of resizing an array or updating the index when an element is added in some arbitrary position inside the collection.
 A LinkedList consumes more memory than an ArrayList, because every node in a LinkedList stores two references, one for its previous element and one for its next element.
 Check also our article ArrayList vs. LinkedList.
-28. What is Comparable and Comparator interface ? List their differences. Java provides the Comparable interface, which contains only one method, called compareTo. This method compares two objects, in order to impose an order between them. Specifically, it returns a negative integer, zero, or a positive integer to indicate that the input object is less than, equal or greater than the existing object. Java provides the Comparator interface, which contains two methods, called compare and equals. The first method compares its two input arguments and imposes an order between them. It returns a negative integer, zero, or a positive integer to indicate that the first argument is less than, equal to, or greater than the second. The second method requires an object as a parameter and aims to decide whether the input object is equal to the comparator. The method returns true, only if the specified object is also a comparator and it imposes the same ordering as the comparator.
-29. What is Java Priority Queue ? The PriorityQueue is an unbounded queue, based on a priority heap and its elements are ordered in their natural order. At the time of its creation, we can provide a Comparator that is responsible for ordering the elements of the PriorityQueue. A PriorityQueue doesn’t allow null values, those objects that doesn’t provide natural ordering, or those objects that don’t have any comparator associated with them. Finally, the Java PriorityQueue is not thread-safe and it requires O(log(n)) time for its enqueing and dequeing operations.
-30. What do you know about the big-O notation and can you give some examples with respect to different data structures ? The Big-O notation simply describes how well an algorithm scales or performs in the worst case scenario as the number of elements in a data structure increases. The Big-O notation can also be used to describe other behavior such as memory consumption. Since the collection classes are actually data structures, we usually use the Big-O notation to chose the best implementation to use, based on time, memory and performance. Big-O notation can give a good indication about performance for large amounts of data.
+
+**28. What is Comparable and Comparator interface ?** List their differences. Java provides the Comparable interface, which contains only one method, called compareTo. This method compares two objects, in order to impose an order between them. Specifically, it returns a negative integer, zero, or a positive integer to indicate that the input object is less than, equal or greater than the existing object. Java provides the Comparator interface, which contains two methods, called compare and equals. The first method compares its two input arguments and imposes an order between them. It returns a negative integer, zero, or a positive integer to indicate that the first argument is less than, equal to, or greater than the second. The second method requires an object as a parameter and aims to decide whether the input object is equal to the comparator. The method returns true, only if the specified object is also a comparator and it imposes the same ordering as the comparator.
+
+**29. What is Java Priority Queue ?** The PriorityQueue is an unbounded queue, based on a priority heap and its elements are ordered in their natural order. At the time of its creation, we can provide a Comparator that is responsible for ordering the elements of the PriorityQueue. A PriorityQueue doesn’t allow null values, those objects that doesn’t provide natural ordering, or those objects that don’t have any comparator associated with them. Finally, the Java PriorityQueue is not thread-safe and it requires O(log(n)) time for its enqueing and dequeing operations.
+
+**30. What do you know about the big-O notation and can you give some examples with respect to different data structures ?** The Big-O notation simply describes how well an algorithm scales or performs in the worst case scenario as the number of elements in a data structure increases. The Big-O notation can also be used to describe other behavior such as memory consumption. Since the collection classes are actually data structures, we usually use the Big-O notation to chose the best implementation to use, based on time, memory and performance. Big-O notation can give a good indication about performance for large amounts of data.
 31. What is the tradeoff between using an unordered array versus an ordered array ? The major advantage of an ordered array is that the search times have time complexity of O(log n), compared to that of an unordered array, which is O (n). The disadvantage of an ordered array is that the insertion operation has a time complexity of O(n), because the elements with higher values must be moved to make room for the new element. Instead, the insertion operation for an unordered array takes constant time of O(1).
 32. What are some of the best practices relating to the Java Collection framework ?
 Choosing the right type of the collection to use, based on the application’s needs, is very crucial for its performance. For example if the size of the elements is fixed and know a priori, we shall use an Array, instead of an ArrayList.
