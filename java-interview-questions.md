@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Object Oriented Programming (OOP)](#object-oriented-programming-oop)
-- [General Questions about Java](#encapsulation)
+- [General Questions about Java](#general-questions-about-java)
 - [Java Threads](#java-threads)
 - [Java Collections](#java-collections)
 - [Garbage Collectors]()
@@ -11,9 +11,9 @@
 - [Java Applets](#java-applets)
 - [Swing](#swing)
 - [JDBC](#jdbc)
-- [Remote Method Invocation (RMI)](#remote-method-innovation)
-- [Servlets]()
-- [JSP]()
+- [Remote Method Invocation (RMI)](#remote-method-invocation-rmi)
+- [Servlets](#servlets)
+- [JSP](#jsp)
 
 ## Object Oriented Programming (OOP)
 
